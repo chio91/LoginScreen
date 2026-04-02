@@ -13,6 +13,7 @@ namespace LoginScreen
             {
                 txtID.Text = "";
                 txtID.ForeColor = Color.Black;
+                btnIDclear.Visible = true;
             }
         }
 
@@ -32,6 +33,7 @@ namespace LoginScreen
             {
                 txtID.Text = "아이디";
                 txtID.ForeColor = Color.Silver;
+                btnIDclear.Visible = false;
             }
         }
 
@@ -81,6 +83,12 @@ namespace LoginScreen
                 e.SuppressKeyPress = true; // 기본비프음방지
                 btnLogin.PerformClick(); // 버튼이눌린것처럼만들기
             }
+        }
+
+        private void btnIDclear_Click(object sender, EventArgs e)
+        {
+            txtID.Text = "";
+            this.ActiveControl = txtID;
         }
     }
 }

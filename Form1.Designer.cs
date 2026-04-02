@@ -33,6 +33,7 @@
             txtPW = new TextBox();
             btnLogin = new Button();
             lblErrorMsg = new Label();
+            btnIDclear = new Button();
             SuspendLayout();
             // 
             // lblAppName
@@ -96,11 +97,29 @@
             lblErrorMsg.Text = "아이디 또는 패스워드가 잘못 입력되었습니다.";
             lblErrorMsg.Visible = false;
             // 
+            // btnIDclear
+            // 
+            btnIDclear.BackColor = SystemColors.Window;
+            btnIDclear.FlatAppearance.BorderColor = SystemColors.Window;
+            btnIDclear.FlatAppearance.BorderSize = 0;
+            btnIDclear.FlatAppearance.MouseDownBackColor = Color.Silver;
+            btnIDclear.FlatAppearance.MouseOverBackColor = Color.LightGray;
+            btnIDclear.ForeColor = Color.Silver;
+            btnIDclear.Location = new Point(594, 174);
+            btnIDclear.Name = "btnIDclear";
+            btnIDclear.Size = new Size(46, 43);
+            btnIDclear.TabIndex = 5;
+            btnIDclear.Text = "X";
+            btnIDclear.UseVisualStyleBackColor = false;
+            btnIDclear.Visible = false;
+            btnIDclear.Click += btnIDclear_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(12F, 30F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(746, 579);
+            Controls.Add(btnIDclear);
             Controls.Add(lblErrorMsg);
             Controls.Add(btnLogin);
             Controls.Add(txtPW);
@@ -119,5 +138,6 @@
         private TextBox txtPW;
         private Button btnLogin;
         private Label lblErrorMsg;
+        private Button btnIDclear;
     }
 }
